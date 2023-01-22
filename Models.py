@@ -96,7 +96,7 @@ class Users:
 
 
 class Message:
-    def __init__(self, from_id, to_id, text):
+    def __init__(self, from_id='', to_id='', text=''):
         self._id = -1
         self.from_id = from_id
         self.to_id = to_id
@@ -131,7 +131,7 @@ class Message:
 
     @staticmethod
     def load_all_messages(cursor):
-        sql = "SELECT from_id, to_id, creation_date, text FROM Messages"
+        sql = "SELECT id, from_id, to_id, creation_date, text FROM Messages"
         messages = []
         cursor.execute(sql)
         for row in cursor.fetchall():
@@ -170,6 +170,12 @@ def main():
 
         #message_1 = Message(8, 9, 'hello')
         #print(message_1)
+
+        #message_2 = Message(9, 8, 'hello')
+        #message_2.save_to_db(cursor)
+
+        #message_3 = Message(8, 16, 'hello')
+        #message_3.save_to_db(cursor)
 
         #message_1.save_to_db(cursor)
 
