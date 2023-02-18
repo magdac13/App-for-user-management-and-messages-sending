@@ -1,6 +1,7 @@
 # application-workshop
 
-Biblioteka do zarządzania bazą danych
+Biblioteka do zarządzania bazą danych.
+
 Zbiór klas służący do zarządzania tabelami w bazie danych. Wykorzystano tutaj  wzorzec projektowy Active Record. 
 
 Aplikacja do zarządzania użytkownikami
